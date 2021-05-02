@@ -1,0 +1,95 @@
+*, 
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  /* border: 1px solid white; */
+  width: 300px;
+  height: 300px;
+  padding: 50px 30px;
+  position: relative;
+}
+
+.container:hover {
+  cursor: pointer;
+}
+
+.line {
+  position: absolute;
+  height: 20px;
+  width: 240px;
+  background: white;
+}
+
+.one {
+  background: cornflowerblue;
+  transition: all 0.3s ease-in-out;
+}
+
+.two {
+  bottom: calc(300px / 2 - 10px);
+  background: plum;
+  transition: all 0.3s ease-in-out;
+}
+
+.three {
+  bottom: 50px;
+  background: aquamarine;
+  transition: all 0.3s ease-in-out;
+}
+
+.container:hover .one {
+  animation: move-one 1s forwards;
+}
+
+@keyframes move-one {
+  50% {
+    transform: translateY(90px);
+  }
+
+  100% {
+    transform: translateY(93px) rotate(45deg);
+  }
+}
+
+.container:hover .two {
+  animation: move-two 0.7s forwards;
+}
+
+@keyframes move-two {
+  100% {
+    opacity: 0;
+  }
+}
+
+.container:hover .three {
+  animation: move-three 1s forwards;
+}
+
+@keyframes move-three {
+  50% {
+    transform: translateY(-90px);
+  }
+
+  100% {
+    transform: translateY(-90px) rotate(-45deg);
+  }
+}
+
