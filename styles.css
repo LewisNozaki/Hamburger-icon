@@ -24,7 +24,6 @@ body {
 /* Hamburger Icon Container */
 
 .container {
-  border: 1px solid white;
   width: 300px;
   height: 300px;
   padding: 50px 30px;
@@ -69,7 +68,7 @@ body {
 
 @keyframes move-one {
   50% {
-    transform: translateY(90px);
+    transform: translateY(93px);
   }
 
   100% {
@@ -101,3 +100,46 @@ body {
   }
 }
 
+/* Reverse */
+
+.moveOneBack {
+  animation: move-one-back 1s forwards;
+}
+
+@keyframes move-one-back {
+  0% {
+    transform: translateY(93px) rotate(45deg);
+  }
+
+  50% {
+    transform: translateY(93px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.moveTwoBack {
+  animation: move-two 0.7s forwards;
+}
+
+@keyframes move-two {
+  100% {
+    opacity: 0;
+  }
+}
+
+.moveThreeBack {
+  animation: move-three 1s forwards;
+}
+
+@keyframes move-three {
+  50% {
+    transform: translateY(-90px);
+  }
+
+  100% {
+    transform: translateY(-90px) rotate(-45deg);
+  }
+}
