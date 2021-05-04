@@ -45,18 +45,21 @@ body {
 
 .one {
   background: cornflowerblue;
+  background: white;
   transition: all 0.3s ease-in-out;
 }
 
 .two {
   bottom: calc(300px / 2 - 10px);
   background: plum;
+  background: white;
   transition: all 0.3s ease-in-out;
 }
 
 .three {
   bottom: 50px;
   background: aquamarine;
+  background: white;
   transition: all 0.3s ease-in-out;
 }
 
@@ -68,11 +71,11 @@ body {
 
 @keyframes move-one {
   50% {
-    transform: translateY(93px);
+    transform: translateY(90px);
   }
 
   100% {
-    transform: translateY(93px) rotate(45deg);
+    transform: translateY(90px) rotate(45deg);
   }
 }
 
@@ -108,11 +111,11 @@ body {
 
 @keyframes move-one-back {
   0% {
-    transform: translateY(93px) rotate(45deg);
+    transform: translateY(90px) rotate(45deg);
   }
 
   50% {
-    transform: translateY(93px) rotate(0deg);
+    transform: translateY(90px) rotate(0deg);
   }
 
   100% {
@@ -121,25 +124,37 @@ body {
 }
 
 .moveTwoBack {
-  animation: move-two 0.7s forwards;
+  animation: move-two-back 0.7s forwards;
 }
 
-@keyframes move-two {
-  100% {
+@keyframes move-two-back {
+  0% {
     opacity: 0;
+  }
+
+  50% {
+    opacity: 0;  
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
 .moveThreeBack {
-  animation: move-three 1s forwards;
+  animation: move-three-back 1s forwards;
 }
 
-@keyframes move-three {
+@keyframes move-three-back {
+  0% {
+    transform: translateY(-90px) rotate(-45deg);
+  }
+  
   50% {
-    transform: translateY(-90px);
+    transform: translateY(-90px) rotate(0deg);
   }
 
   100% {
-    transform: translateY(-90px) rotate(-45deg);
+    transform: translateY(0px);
   }
 }
